@@ -1,0 +1,8 @@
+name: Variables-workflow
+on: push
+jobs:
+  variable-job-running:
+  runs-on: ubuntu-latest
+    steps:
+      - name: my-variable-print
+        run: echo "This my ID ${{ vars.ID }}" 
