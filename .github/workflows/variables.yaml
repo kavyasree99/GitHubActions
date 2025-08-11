@@ -5,5 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-variable-print
-        run: echo "This my ID ${{ vars.ID }}" 
+        run: echo "This my ID ${{ vars.ID }}"
+  variable-job-running:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-secrets-print
+        run: echo "This is my secrets id ${{ secrets.my_id }}"  
         
