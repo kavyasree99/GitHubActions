@@ -12,4 +12,11 @@ jobs:
     steps:
       - name: my-secrets-print
         run: echo "This is my secrets id ${{ secrets.my_id }}"  
+  variable-job-running-sec2:
+    needs: variable-job-running
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-secrets-print
+        run: echo "This is my secrets id ${{ secrets.my_id }}"  
+  
         
