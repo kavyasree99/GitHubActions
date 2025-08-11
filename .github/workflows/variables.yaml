@@ -6,7 +6,8 @@ jobs:
     steps:
       - name: my-variable-print
         run: echo "This my ID ${{ vars.ID }}"
-  variable-job-running-secrets:
+  variable-job-running-sec:
+    need: variable-job-running
     runs-on: ubuntu-latest
     steps:
       - name: my-secrets-print
