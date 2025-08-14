@@ -1,9 +1,9 @@
 name: Triggering
 on:
-  #pull_request:
-   # branchs:
-    #  -main
-  push:
+  pull_request:
+    branchs:
+      -main
+  #push:
   workflow_dispatch:
 jobs:
   variable-job-running:
