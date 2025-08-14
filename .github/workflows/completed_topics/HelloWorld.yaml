@@ -1,0 +1,10 @@
+name: hello-world
+on: push
+jobs:
+  demo-job-running:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-print
+        run: echo "Hello World! sucessfully printed"
+      - name: my-second-step
+        run: echo "Just checking"
