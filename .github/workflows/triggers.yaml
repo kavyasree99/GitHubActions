@@ -4,13 +4,14 @@ on:
    # branchs:
     #  -main
   #push:
-  workflow-dispatch:
+  workflow_dispatch:
 jobs:
   variable-job-running:
     runs-on: ubuntu-latest
     steps:
       - name: my-variable-print
         run: echo "This my ID ${{ vars.ID }}"
+  variable-job-running-sec:
     needs: variable-job-running
     runs-on: ubuntu-latest
     steps:
