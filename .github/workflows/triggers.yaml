@@ -3,7 +3,7 @@ on:
   #pull_request:
    # branchs:
     #  -main
-  #push:
+  push:
   workflow_dispatch:
 jobs:
   variable-job-running:
