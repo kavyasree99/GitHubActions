@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        environment: ["dev", "UAT", "prod"]
+        environment: ["dev", "UAT", "prod","QA"]
     steps:
       - name: "Deploy ${{ matrix.environment }} step"
         run: echo "Deploying ${{ matrix.environment }}"
