@@ -1,7 +1,6 @@
 name: Inputs file
 on:
   workflow_dispatch:
-  workflow_call:
     inputs:
       variable-passing:
         description: "This is input variable"
