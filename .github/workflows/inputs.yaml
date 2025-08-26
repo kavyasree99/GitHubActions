@@ -1,0 +1,17 @@
+name: input File
+
+on:
+  workflow_dispatch:
+    inputs:
+      variable-passing:
+        description: "This is input variable"
+        default: "Kavya"
+        type: string
+        required: true
+
+jobs:
+  calling-variable:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: "printing the variable"
+        run: echo "Variable is ${{ inputs.variable-passing }}"
