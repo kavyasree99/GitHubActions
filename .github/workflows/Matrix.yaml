@@ -1,0 +1,17 @@
+name : Matrix Learning
+on :
+ workflow_dispatch:
+ push: 
+Jobs:
+  Matrix-learning-deploy:
+    name: "Deploy on ${{ matrix.environment }}"
+    runs-on : ubuntu-latest
+    strategy:
+      matrix:
+        environment: [ "dev","UAT","prod"]
+    steps:
+      name: "Deploy ${{ matrix.environment}} step"
+      run: echo "Deploying ${ENVIRONMENT}"
+      env: 
+        ENVIRONMENT: ${{matrix.environment}}
+   
