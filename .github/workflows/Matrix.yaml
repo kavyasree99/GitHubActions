@@ -2,7 +2,7 @@ name : Matrix Learning
 on :
  workflow_dispatch:
  push: 
-Jobs:
+ jobs:
   Matrix-learning-deploy:
     name: "Deploy on ${{ matrix.environment }}"
     runs-on : ubuntu-latest
