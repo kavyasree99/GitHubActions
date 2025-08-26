@@ -1,5 +1,5 @@
 name : Matrix Learning
-on :
+on:
  workflow_dispatch:
  push: 
  jobs:
@@ -11,7 +11,5 @@ on :
         environment: [ "dev","UAT","prod"]
     steps:
       name: "Deploy ${{ matrix.environment}} step"
-      run: echo "Deploying ${ENVIRONMENT}"
-      env: 
-        ENVIRONMENT: ${{matrix.environment}}
+      run: echo "Deploying ${{matrix.environment}}"
    
