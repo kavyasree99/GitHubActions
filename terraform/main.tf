@@ -41,7 +41,7 @@ data "aws_subnets" "default" {
 resource "aws_instance" "web" {
   ami           = "ami-0861f4e788f5069dd"  # Ensure AMI is valid in ap-south-1
   instance_type = "t3.micro"
-  #subnet_id     = data.aws_subnets.default.ids[0]
+  subnet_id     = data.aws_subnets.default.ids[0]
 
   user_data = <<-EOF
     #!/bin/bash
