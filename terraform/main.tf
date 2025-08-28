@@ -44,13 +44,13 @@ resource "aws_instance" "web" {
   subnet_id     = "subnet-093a924eb18ee558c"
 
   user_data = <<-EOF
-    #!/bin/bash
+    !/bin/bash
     sudo yum update -y
     sudo yum install -y httpd
     sudo systemctl start httpd
     sudo systemctl enable httpd
-    echo "Hello, World!" > /var/www/html/index.html
-  EOF
+    echo "Hello, SMC!" > /var/www/html/index.html
+ EOF
 
   tags = {
     Name = "HelloWorld"
