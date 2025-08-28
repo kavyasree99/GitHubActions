@@ -1,0 +1,12 @@
+name: Terraform-deployment
+on: 
+    [ push, workflow_dispatch ]
+
+jobs:
+  tf-deploy-job:
+    uses: Mr-siva/github-actions-root/.github/workflows/terraform.yaml@main
+    with:
+      env_name: dev
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
