@@ -1,0 +1,35 @@
+name: Terraform-deployment
+on: 
+    [ push, workflow_dispatch ]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Greeting
+        run: |
+          echo "Hello and welcome! 👋"
+          echo "ram"
+      - name: Print Greeting 2
+        run: echo "Hello and welcome! -2"
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Print message
+        run: |
+          echo "I am a good person"
+          echo "CHAPRI"
+  
+  wishing-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4   # ✅ Checkout your repo first
+      - name: re-useable workflow
+        uses: ./.github/actions/mesg
+        with:
+          who-to-greet: "Siva"
+
+  wishes:
+    uses: Mr-siva/github-actions-root/.github/workflows/reuseable.yaml@main
+    with:
+      env_name: dev 

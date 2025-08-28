@@ -1,21 +1,24 @@
 name: Variables-workflow
+
 on: push
+
 jobs:
   variable-job-running:
     runs-on: ubuntu-latest
     steps:
       - name: my-variable-print
-        run: echo "This my ID ${{ vars.ID }}"
+        run: echo "This is my ID ${{ vars.ID }}"
+
+  variable-job-running-sec:
     needs: variable-job-running
     runs-on: ubuntu-latest
     steps:
       - name: my-secrets-print
-        run: echo "This is my secrets id ${{ secrets.my_id }}"  
+        run: echo "This is my secrets id ${{ secrets.my_id }}"
+
   variable-job-running-sec2:
     needs: [variable-job-running, variable-job-running-sec]
     runs-on: ubuntu-latest
     steps:
       - name: my-secrets-print
-        run: echo "This is my secrets id ${{ secrets.my_id }}"  
-  
-        
+        run: echo "This is my secrets id ${{ secrets.my_id }}"
