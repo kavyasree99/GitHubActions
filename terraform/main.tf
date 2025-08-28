@@ -53,7 +53,7 @@ resource "aws_instance" "web" {
  EOF
 
   tags = {
-    Name = "HelloWorld"
+    Name = "Hello-SMD"
   }
 }
 
