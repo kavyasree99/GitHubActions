@@ -42,6 +42,7 @@ resource "aws_instance" "web" {
   ami           = "ami-0861f4e788f5069dd"  # Ensure AMI is valid in ap-south-1
   instance_type = "t3.micro"
   subnet_id     = "subnet-0e5ffb15ee5ea092e"
+  vpc_id = "vpc-0bf5e5f6c3f17974f"
 
   user_data = <<-EOF
     #!/bin/bash
